@@ -15,7 +15,8 @@
 
       <!-- Heading -->
       <div class="sidebar-heading text-light">
-        Admin <br>Al-Azhar
+        Admin
+         <!-- <br>Al-Azhar -->
       </div>
       
       <!-- <li class="nav-item" id="sidebarPeserta">
