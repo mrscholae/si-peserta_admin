@@ -7,7 +7,7 @@
           <!-- <i class="fas fa-user-shield"></i> -->
           <img src="<?= base_url()?>assets/img/logo.png" width="50" class="img-fluid img-shadow">
         </div>
-        <div class="sidebar-brand-text mx-3">Admin Al-Azhar</div>
+        <div class="sidebar-brand-text mx-3">Admin</div>
       </a>
 
       
@@ -16,7 +16,6 @@
       <!-- Heading -->
       <div class="sidebar-heading text-light">
         Admin
-         <!-- <br>Al-Azhar -->
       </div>
       
       <!-- <li class="nav-item" id="sidebarPeserta">
