@@ -39,6 +39,7 @@ class Laporan extends CI_Controller {
             $kelas = $this->Main_model->get_all("kelas", ["MONTH(tgl_mulai)" => $bulan, "YEAR(tgl_mulai)" => $tahun], "program", "ASC");
             foreach ($kelas as $i => $kelas) {
                 $data['kelas'][$i] = $kelas;
+                $data['kelas'][$i]['peserta'][$j] = [];
                 
                 $pelajaran = $this->Main_model->get_all("pelajaran_kelas", ["program" => $kelas['program']]);
                 $data['kelas'][$i]['pelajaran'] = [];
@@ -251,7 +252,8 @@ class Laporan extends CI_Controller {
             $kelas = $this->Main_model->get_all("kelas", ["MONTH(tgl_mulai)" => $bulan, "YEAR(tgl_mulai)" => $tahun], "program", "ASC");
             foreach ($kelas as $i => $kelas) {
                 $data['kelas'][$i] = $kelas;
-                
+                $data['kelas'][$i]['peserta'][$j] = [];
+
                 $pelajaran = $this->Main_model->get_all("pelajaran_kelas", ["program" => $kelas['program']]);
                 $data['kelas'][$i]['pelajaran'] = [];
                 foreach ($pelajaran as $pelajaran) {
@@ -462,6 +464,7 @@ class Laporan extends CI_Controller {
             $kelas = $this->Main_model->get_all("kelas", ["MONTH(tgl_mulai)" => $bulan, "YEAR(tgl_mulai)" => $tahun], "program", "ASC");
             foreach ($kelas as $i => $kelas) {
                 $data['kelas'][$i] = $kelas;
+                $data['kelas'][$i]['peserta'][$j] = [];
 
                 $peserta = $this->Main_model->get_all("kelas_peserta", ["id_kelas" => $kelas['id_kelas']]);
                 foreach ($peserta as $j => $peserta) {
